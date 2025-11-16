@@ -1,16 +1,65 @@
-# React + Vite
+**Movie List**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- **Project:** A small React + Vite app to browse and view movie details.
+- **Purpose:** Demo/movie-list app showcasing components, routing, and an API service.
 
-Currently, two official plugins are available:
+**Quick Start**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Prerequisites:** Node.js (16+) and `npm`
+- **Install:**
 
-## React Compiler
+  ```powershell
+  npm install
+  ```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Run (dev):**
 
-## Expanding the ESLint configuration
+  ```powershell
+  npm run dev
+  ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Build:**
+
+  ```powershell
+  npm run build
+  ```
+
+**What’s included**
+
+- **Framework:** React with Vite
+- **Styling:** CSS files under `src/css/`
+- **Routing / Pages:** `src/pages/Home.jsx`, `src/pages/MovieDetails.jsx`
+- **Components:** `src/components/MovieCard.jsx`, `src/components/NavBar.jsx`
+- **Service:** `src/services/api.js` — central place for API calls
+
+**Project Structure**
+
+```
+.
+├─ index.html
+├─ package.json
+├─ src/
+│  ├─ main.jsx
+|  ├─ App.jsx
+|  ├─ pages/
+|  │  ├─ Home.jsx
+|  │  └─ MovieDetails.jsx
+|  ├─ components/
+|  │  ├─ MovieCard.jsx
+|  │  └─ NavBar.jsx
+|  ├─ css/
+|  └─ services/
+|     └─ api.js
+└─ public/
+```
+
+**Usage notes**
+
+- The app uses Vite dev server. Open the URL shown after `npm run dev` (usually `http://localhost:5173`).
+- API integration is centralized in `src/services/api.js`. If you need to change the data source, update that file.
+- Styles are split into small files under `src/css/` mapped to components and pages.
+
+**Development tips**
+
+- Add new components under `src/components/` and their styles under `src/css/`.
+- Keep API-related logic in `src/services/` to simplify mocking and testing.

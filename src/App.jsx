@@ -1,0 +1,21 @@
+import "./css/App.css";
+import Home from "./pages/Home";
+import MovieDetails from "./pages/MovieDetails";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+
+function App() {
+  return (
+    <>
+      <NavBar />
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movie/:movieId" element={<MovieDetails />} />
+        </Routes>
+      </main>
+    </>
+  );
+}
+
+export default App;
